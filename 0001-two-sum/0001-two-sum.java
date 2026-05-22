@@ -14,22 +14,4 @@ class Solution {
         }
         return new int [] {};
     }
-    public static void main (String args[])
-    {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter the array length:");
-        int n = sc.nextInt();
-        int [] nums = new int[n];
-        System.out.println("enter the values: ");
-        for(int i =0; i<n; i++){
-            nums [i] = sc.nextInt();
-        }
-        
-        System.out.println("enter the Target: ");
-        int target = sc.nextInt();
-        int result[]= twoSum(nums, target);
-        sc.close();
-    }
-
-
-    }
+}
