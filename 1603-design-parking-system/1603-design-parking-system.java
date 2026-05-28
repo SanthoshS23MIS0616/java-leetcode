@@ -1,47 +1,22 @@
 class ParkingSystem {
 
-    int big, medium, small;
+    int arr[] = new int[3];
 
-    // constructor
+
     public ParkingSystem(int big, int medium, int small) {
 
-        this.big = big;
-        this.medium = medium;
-        this.small = small;
+        arr[0] = big;
+        arr[1]=medium;
+        arr[2] = small;
     }
-
-    // method to add car
+    
     public boolean addCar(int carType) {
-
-        // big car
-        if (carType == 1) {
-
-            if (big > 0) {
-                big--;
-                return true;
-            }
+        if(arr[carType-1]>0){
+            arr[carType-1]--;
+            return true;
         }
-
-        // medium car
-        else if (carType == 2) {
-
-            if (medium > 0) {
-                medium--;
-                return true;
-            }
-        }
-
-        // small car
-        else if (carType == 3) {
-
-            if (small > 0) {
-                small--;
-                return true;
-            }
-        }
-
-        // parking full
         return false;
+        
     }
 }
 
